@@ -1,0 +1,6 @@
+[submodule "Latest/Abstractions"]
+	path = Latest/Abstractions
+	url = https://github.com/unitycontainer/abstractions.git
+[submodule "Latest/Container"]
+	path = Latest/Container
+	url = https://github.com/unitycontainer/container.git
