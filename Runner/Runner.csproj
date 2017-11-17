@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net461</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" Version="0.10.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Benchmark.Abstractions\Benchmark.Abstractions.csproj" />
+    <ProjectReference Include="..\Unity.V4.Adapter\Unity.V4.Adapter.csproj" />
+    <ProjectReference Include="..\Unity.V5.Adapter\Unity.V5.Adapter.csproj" />
+    <ProjectReference Include="..\Unity.V6.Adapter\Unity.V6.Adapter.csproj" />
+  </ItemGroup>
+
+</Project>
