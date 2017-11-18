@@ -1,13 +1,16 @@
-﻿using System;
-using BenchmarkDotNet.Running;
+﻿using BenchmarkDotNet.Running;
+using Runner.Tests;
 
 namespace Runner
 {
-    class Program
+    public class Program
     {
+
         static void Main(string[] args)
         {
-            var summary = BenchmarkRunner.Run<CreateContainer>();
+            //BenchmarkSwitcher.FromAssembly(typeof(Program).GetTypeInfo().Assembly).Run(args);
+
+            var summary = BenchmarkRunner.Run<UnityContainerBenchmarks>();
         }
     }
 }

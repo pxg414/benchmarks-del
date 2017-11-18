@@ -2,8 +2,23 @@
 
 namespace Benchmark.Abstractions
 {
-    public abstract class UnityAdapterBase
+    public interface IUnityAdapter
     {
-        public abstract void CreateContainer();
+        void NewUnityContainer();
+
+        void UsingUnityContainer();
+    }
+
+    public abstract class UnityAdapterBase<T> : IUnityAdapter where T : IDisposable 
+    {
+        protected abstract T CreateContainer();
+
+        public virtual void NewUnityContainer() { T container = CreateContainer(); }
+
+        public virtual void UsingUnityContainer() { using (T container = CreateContainer()) { } }
+
+        public virtual void RegisterInstance()
+        {
+        }
     }
 }

@@ -2,8 +2,15 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net461</TargetFramework>
+    <TargetFramework>net47</TargetFramework>
+    <OutDir>$(SolutionDir)bin\Runner</OutDir>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="BenchmarkDotNet.Artifacts\**" />
+    <EmbeddedResource Remove="BenchmarkDotNet.Artifacts\**" />
+    <None Remove="BenchmarkDotNet.Artifacts\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="BenchmarkDotNet" Version="0.10.10" />
@@ -11,9 +18,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Benchmark.Abstractions\Benchmark.Abstractions.csproj" />
-    <ProjectReference Include="..\Unity.V4.Adapter\Unity.V4.Adapter.csproj" />
-    <ProjectReference Include="..\Unity.V5.Adapter\Unity.V5.Adapter.csproj" />
-    <ProjectReference Include="..\Unity.V6.Adapter\Unity.V6.Adapter.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,10 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net47</TargetFramework>
+    <OutDir>$(SolutionDir)bin\Unity.V5.Adapter</OutDir>
+    <RootNamespace>Unity.V5.Adapter</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" Version="0.10.10" />
     <PackageReference Include="Unity" Version="5.*" />
   </ItemGroup>
 
