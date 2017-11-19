@@ -8,54 +8,65 @@ Frequency=3914064 Hz, Resolution=255.4889 ns, Timer=TSC
 
 
 ```
-|         Type |                                    Method |  Version |             Mean |            Error |           StdDev |           Median |
-|------------- |------------------------------------------ |--------- |-----------------:|-----------------:|-----------------:|-----------------:|
-|        Basic |            Container.Resolve<Container>() | Unity.V4 |         461.1 ns |         3.544 ns |         2.960 ns |         459.8 ns |
-|        Basic |            Container.Resolve<Container>() | Unity.V5 |         740.1 ns |         6.735 ns |         5.971 ns |         739.1 ns |
-|        Basic |            Container.Resolve<Container>() | Unity.V6 |         476.5 ns |         5.089 ns |         4.511 ns |         474.8 ns |
-|        Basic |            Container.Resolve<Container>() |   VS_MEF |       2,944.6 ns |        58.669 ns |       167.387 ns |       2,857.0 ns |
-|        Basic |                         'new Container()' | Unity.V4 |       6,673.2 ns |        69.736 ns |        65.231 ns |       6,681.7 ns |
-|        Basic |                         'new Container()' | Unity.V5 |       3,379.3 ns |         5.522 ns |         4.895 ns |       3,380.2 ns |
-|        Basic |                         'new Container()' | Unity.V6 |       3,462.5 ns |        63.631 ns |        59.521 ns |       3,464.8 ns |
-|        Basic |                         'new Container()' |   VS_MEF |      57,344.7 ns |       202.490 ns |       169.088 ns |      57,329.4 ns |
-|        Basic |       'using(var uc = new Container()){}' | Unity.V4 |       6,857.0 ns |        73.355 ns |        68.617 ns |       6,846.1 ns |
-|        Basic |       'using(var uc = new Container()){}' | Unity.V5 |       3,642.1 ns |        52.423 ns |        43.776 ns |       3,630.5 ns |
-|        Basic |       'using(var uc = new Container()){}' | Unity.V6 |       3,746.0 ns |        49.694 ns |        44.053 ns |       3,735.8 ns |
-|        Basic |       'using(var uc = new Container()){}' |   VS_MEF |      58,331.0 ns |     1,223.152 ns |     1,144.137 ns |      57,768.0 ns |
-|    MultiType |                  'Multiple Registrations' | Unity.V4 | 161,901,905.2 ns | 1,224,656.299 ns | 1,085,625.804 ns | 161,828,787.5 ns |
-|    MultiType |                  'Multiple Registrations' | Unity.V5 | 220,077,348.8 ns | 2,249,545.683 ns | 2,104,226.223 ns | 219,718,961.7 ns |
-|    MultiType |                  'Multiple Registrations' | Unity.V6 | 218,801,943.3 ns | 2,687,571.999 ns | 2,513,956.271 ns | 218,988,744.0 ns |
-|    MultiType |                  'Multiple Registrations' |   VS_MEF |               NA |               NA |               NA |               NA |
-| Registration |         'Register Named Type (Singleton)' | Unity.V4 |       1,280.6 ns |        23.775 ns |        22.239 ns |       1,282.0 ns |
-| Registration |         'Register Named Type (Singleton)' | Unity.V5 |         816.7 ns |        16.314 ns |        22.870 ns |         816.3 ns |
-| Registration |         'Register Named Type (Singleton)' | Unity.V6 |         835.2 ns |        16.561 ns |        19.071 ns |         833.0 ns |
-| Registration |         'Register Named Type (Singleton)' |   VS_MEF |               NA |               NA |               NA |               NA |
-| Registration | 'Register Named Type Mapping (Singleton)' | Unity.V4 |       2,323.0 ns |        31.951 ns |        29.887 ns |       2,319.8 ns |
-| Registration | 'Register Named Type Mapping (Singleton)' | Unity.V5 |         959.5 ns |        18.976 ns |        26.602 ns |         946.5 ns |
-| Registration | 'Register Named Type Mapping (Singleton)' | Unity.V6 |       1,018.8 ns |        18.334 ns |        17.149 ns |       1,017.2 ns |
-| Registration | 'Register Named Type Mapping (Singleton)' |   VS_MEF |               NA |               NA |               NA |               NA |
-| Registration |             'Register Named Type Mapping' | Unity.V4 |       1,029.5 ns |        12.992 ns |        11.517 ns |       1,026.3 ns |
-| Registration |             'Register Named Type Mapping' | Unity.V5 |         517.9 ns |         2.614 ns |         2.446 ns |         517.7 ns |
-| Registration |             'Register Named Type Mapping' | Unity.V6 |         532.4 ns |         7.019 ns |         6.565 ns |         532.0 ns |
-| Registration |             'Register Named Type Mapping' |   VS_MEF |               NA |               NA |               NA |               NA |
-| Registration |                     'Register Named Type' | Unity.V4 |         204.7 ns |         3.261 ns |         3.050 ns |         205.1 ns |
-| Registration |                     'Register Named Type' | Unity.V5 |         333.9 ns |         5.662 ns |         5.297 ns |         331.7 ns |
-| Registration |                     'Register Named Type' | Unity.V6 |         334.8 ns |         3.898 ns |         3.646 ns |         335.0 ns |
-| Registration |                     'Register Named Type' |   VS_MEF |               NA |               NA |               NA |               NA |
-| Registration |               'Register Type (Singleton)' | Unity.V4 |       1,239.2 ns |         9.167 ns |         8.126 ns |       1,236.8 ns |
-| Registration |               'Register Type (Singleton)' | Unity.V5 |         758.9 ns |        19.596 ns |        18.330 ns |         750.8 ns |
-| Registration |               'Register Type (Singleton)' | Unity.V6 |         762.6 ns |        15.168 ns |        21.263 ns |         752.3 ns |
-| Registration |               'Register Type (Singleton)' |   VS_MEF |               NA |               NA |               NA |               NA |
-| Registration |       'Register Type Mapping (Singleton)' | Unity.V4 |       2,258.3 ns |        33.669 ns |        31.494 ns |       2,258.3 ns |
-| Registration |       'Register Type Mapping (Singleton)' | Unity.V5 |         900.9 ns |        11.581 ns |         9.671 ns |         896.6 ns |
-| Registration |       'Register Type Mapping (Singleton)' | Unity.V6 |         972.3 ns |        19.303 ns |        26.423 ns |         961.6 ns |
-| Registration |       'Register Type Mapping (Singleton)' |   VS_MEF |               NA |               NA |               NA |               NA |
-| Registration |                   'Register Type Mapping' | Unity.V4 |       1,019.9 ns |         3.855 ns |         2.787 ns |       1,019.8 ns |
-| Registration |                   'Register Type Mapping' | Unity.V5 |         491.7 ns |         6.150 ns |         5.452 ns |         492.1 ns |
-| Registration |                   'Register Type Mapping' | Unity.V6 |         490.8 ns |         5.459 ns |         4.839 ns |         490.0 ns |
-| Registration |                   'Register Type Mapping' |   VS_MEF |               NA |               NA |               NA |               NA |
-| Registration |                           'Register Type' | Unity.V4 |         193.7 ns |         1.485 ns |         1.389 ns |         193.3 ns |
-| Registration |                           'Register Type' | Unity.V5 |         315.7 ns |         1.723 ns |         1.345 ns |         316.1 ns |
-| Registration |                           'Register Type' | Unity.V6 |         354.9 ns |         3.998 ns |         3.740 ns |         354.7 ns |
-| Registration |                           'Register Type' |   VS_MEF |               NA |               NA |               NA |               NA |
+# Basic
+
+|                              Method |  Version |        Mean |      Error |     StdDev |
+|------------------------------------ |--------- |------------:|-----------:|-----------:|
+|      Container.Resolve<Container>() | Unity.V4 |    458.2 ns |   2.415 ns |   2.016 ns |
+|      Container.Resolve<Container>() | Unity.V5 |    737.9 ns |  10.072 ns |   9.421 ns |
+|      Container.Resolve<Container>() | Unity.V6 |    479.4 ns |   8.566 ns |   7.593 ns |
+|      Container.Resolve<Container>() |   VS_MEF |  2,814.9 ns |  14.542 ns |  13.602 ns |
+|                   'new Container()' | Unity.V4 |  6,489.4 ns |  55.737 ns |  52.137 ns |
+|                   'new Container()' | Unity.V5 |  3,370.8 ns |  12.191 ns |  10.180 ns |
+|                   'new Container()' | Unity.V6 |  3,462.3 ns |  24.325 ns |  20.313 ns |
+|                   'new Container()' |   VS_MEF | 57,311.7 ns | 349.694 ns | 327.104 ns |
+| 'using(var uc = new Container()){}' | Unity.V4 |  6,828.1 ns |  97.852 ns |  91.531 ns |
+| 'using(var uc = new Container()){}' | Unity.V5 |  3,641.0 ns |  54.798 ns |  51.258 ns |
+| 'using(var uc = new Container()){}' | Unity.V6 |  3,712.5 ns |  24.850 ns |  20.751 ns |
+| 'using(var uc = new Container()){}' |   VS_MEF | 58,291.3 ns | 582.364 ns | 544.744 ns |
+
+# Registration
+
+|                                    Method |  Version |       Mean |     Error |     StdDev |
+|------------------------------------------ |--------- |-----------:|----------:|-----------:|
+|         'Register Named Type (Singleton)' | Unity.V4 | 1,266.3 ns | 10.676 ns |  9.4644 ns |
+|         'Register Named Type (Singleton)' | Unity.V5 |   797.0 ns |  8.250 ns |  7.7173 ns |
+|         'Register Named Type (Singleton)' | Unity.V6 |   785.8 ns | 15.428 ns | 18.9474 ns |
+|         'Register Named Type (Singleton)' |   VS_MEF |         NA |        NA |         NA |
+| 'Register Named Type Mapping (Singleton)' | Unity.V4 | 2,231.8 ns |  5.173 ns |  4.8387 ns |
+| 'Register Named Type Mapping (Singleton)' | Unity.V5 |   975.5 ns |  4.871 ns |  4.5559 ns |
+| 'Register Named Type Mapping (Singleton)' | Unity.V6 |   928.4 ns |  3.146 ns |  2.9432 ns |
+| 'Register Named Type Mapping (Singleton)' |   VS_MEF |         NA |        NA |         NA |
+|             'Register Named Type Mapping' | Unity.V4 | 1,048.3 ns | 14.301 ns | 13.3769 ns |
+|             'Register Named Type Mapping' | Unity.V5 |   525.5 ns |  1.244 ns |  0.8993 ns |
+|             'Register Named Type Mapping' | Unity.V6 |   592.1 ns |  1.191 ns |  1.0558 ns |
+|             'Register Named Type Mapping' |   VS_MEF |         NA |        NA |         NA |
+|                     'Register Named Type' | Unity.V4 |   213.4 ns |  1.860 ns |  1.7395 ns |
+|                     'Register Named Type' | Unity.V5 |   351.7 ns |  3.796 ns |  3.5511 ns |
+|                     'Register Named Type' | Unity.V6 |   327.7 ns |  1.702 ns |  1.5083 ns |
+|                     'Register Named Type' |   VS_MEF |         NA |        NA |         NA |
+|               'Register Type (Singleton)' | Unity.V4 | 1,250.3 ns |  7.761 ns |  7.2592 ns |
+|               'Register Type (Singleton)' | Unity.V5 |   772.4 ns | 14.011 ns | 13.1062 ns |
+|               'Register Type (Singleton)' | Unity.V6 |   769.6 ns |  9.400 ns |  7.8498 ns |
+|               'Register Type (Singleton)' |   VS_MEF |         NA |        NA |         NA |
+|       'Register Type Mapping (Singleton)' | Unity.V4 | 2,172.8 ns | 12.255 ns | 11.4635 ns |
+|       'Register Type Mapping (Singleton)' | Unity.V5 |   954.3 ns | 18.295 ns | 17.9685 ns |
+|       'Register Type Mapping (Singleton)' | Unity.V6 |   899.3 ns | 14.865 ns | 13.9049 ns |
+|       'Register Type Mapping (Singleton)' |   VS_MEF |         NA |        NA |         NA |
+|                   'Register Type Mapping' | Unity.V4 | 1,022.7 ns |  4.795 ns |  4.4853 ns |
+|                   'Register Type Mapping' | Unity.V5 |   491.9 ns |  2.977 ns |  2.6387 ns |
+|                   'Register Type Mapping' | Unity.V6 |   483.1 ns |  1.269 ns |  1.1252 ns |
+|                   'Register Type Mapping' |   VS_MEF |         NA |        NA |         NA |
+|                           'Register Type' | Unity.V4 |   193.9 ns |  2.441 ns |  2.2837 ns |
+|                           'Register Type' | Unity.V5 |   313.6 ns |  3.451 ns |  3.2280 ns |
+|                           'Register Type' | Unity.V6 |   353.1 ns |  1.980 ns |  1.6531 ns |
+|                           'Register Type' |   VS_MEF |         NA |        NA |         NA |
+# Load Multiple Registrations
+
+|                   Method |  Version |     Mean |    Error |   StdDev |
+|------------------------- |--------- |---------:|---------:|---------:|
+| 'Multiple Registrations' | Unity.V4 | 156.9 ms | 1.131 ms | 1.058 ms |
+| 'Multiple Registrations' | Unity.V5 | 222.1 ms | 2.414 ms | 2.258 ms |
+| 'Multiple Registrations' | Unity.V6 | 220.7 ms | 4.235 ms | 4.708 ms |
+| 'Multiple Registrations' |   VS_MEF |       NA |       NA |       NA |
 
