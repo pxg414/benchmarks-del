@@ -61,12 +61,3 @@ Frequency=3914064 Hz, Resolution=255.4889 ns, Timer=TSC
 |                           'Register Type' | Unity.V5 |   313.6 ns |  3.451 ns |  3.2280 ns |
 |                           'Register Type' | Unity.V6 |   353.1 ns |  1.980 ns |  1.6531 ns |
 |                           'Register Type' |   VS_MEF |         NA |        NA |         NA |
-# Load Multiple Registrations
-
-|                   Method |  Version |     Mean |    Error |   StdDev |
-|------------------------- |--------- |---------:|---------:|---------:|
-| 'Multiple Registrations' | Unity.V4 | 156.9 ms | 1.131 ms | 1.058 ms |
-| 'Multiple Registrations' | Unity.V5 | 222.1 ms | 2.414 ms | 2.258 ms |
-| 'Multiple Registrations' | Unity.V6 | 220.7 ms | 4.235 ms | 4.708 ms |
-| 'Multiple Registrations' |   VS_MEF |       NA |       NA |       NA |
-
