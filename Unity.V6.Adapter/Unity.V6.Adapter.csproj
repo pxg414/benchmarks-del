@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="BenchmarkDotNet" Version="0.10.10" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Benchmark.Abstractions\Benchmark.Abstractions.csproj" />
     <ProjectReference Include="..\Latest\Abstractions\src\Unity.Abstractions.csproj" />
     <ProjectReference Include="..\Latest\Container\src\Unity.Container.csproj" />

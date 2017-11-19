@@ -2,11 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>net47</TargetFramework>
-    <OutDir>$(SolutionDir)bin\Unity.V4.Adapter</OutDir>
+    <OutDir>$(SolutionDir)bin\VS_MEF.Adapter</OutDir>
+    <RootNamespace>VS_MEF.Adapter</RootNamespace>
+    <AssemblyName>VS_MEF.Adapter</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Unity" Version="4.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Composition" Version="15.3.*" />
   </ItemGroup>
 
   <ItemGroup>
