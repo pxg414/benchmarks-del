@@ -14,8 +14,8 @@ Frequency=3914064 Hz, Resolution=255.4889 ns, Timer=TSC
 |------------------------------------ |--------- |------------:|-----------:|-----------:|
 |      Container.Resolve<Container>() | Unity.V4 |    458.2 ns |   2.415 ns |   2.016 ns |
 |      Container.Resolve<Container>() | Unity.V5 |    737.9 ns |  10.072 ns |   9.421 ns |
-|      Container.Resolve<Container>() | Unity.V6 |    479.4 ns |   8.566 ns |   7.593 ns |
-|      Container.Resolve<Container>() |   VS_MEF |  2,814.9 ns |  14.542 ns |  13.602 ns |
+|    `Container.Resolve<Container>()` | Unity.V6 |    479.4 ns |   8.566 ns |   7.593 ns |
+|  ``Container.Resolve<Container>()`` |   VS_MEF |  2,814.9 ns |  14.542 ns |  13.602 ns |
 |                   'new Container()' | Unity.V4 |  6,489.4 ns |  55.737 ns |  52.137 ns |
 |                   'new Container()' | Unity.V5 |  3,370.8 ns |  12.191 ns |  10.180 ns |
 |                   'new Container()' | Unity.V6 |  3,462.3 ns |  24.325 ns |  20.313 ns |
