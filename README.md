@@ -1,3 +1,5 @@
+This project uses [BenchmarkDotNet](http://benchmarkdotnet.org/) to compare performance of different versions of the library.
+
 ``` ini
 
 BenchmarkDotNet=v0.10.10, OS=Windows 10 Redstone 2 [1703, Creators Update] (10.0.15063.726)
