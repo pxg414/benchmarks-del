@@ -15,6 +15,8 @@ namespace Benchmark.Abstractions
 
         object Singleton();
 
+        object Resolve(Type type, string name);
+
 
         object RegisterType(Type type, string name);
 
@@ -42,6 +44,8 @@ namespace Benchmark.Abstractions
         public virtual void UsingContainer() { using (var container = (T)CreateContainer()) { } }
 
         public abstract object Singleton();
+
+        public abstract object Resolve(Type type, string name);
 
         public abstract object RegisterType(Type type, string name);
 

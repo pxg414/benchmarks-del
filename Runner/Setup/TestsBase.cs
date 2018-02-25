@@ -7,7 +7,7 @@ namespace Runner.Tests
 {
     public class TestsBase
     {
-        [Params("Unity.V4", "Unity.V5", "Unity.V6", "VS_MEF")]
+        [Params("Unity.V4", "Unity.V5", "Unity.V6")]
         protected string Version;
 
         protected ITestAdapter Adapter;
@@ -26,7 +26,16 @@ namespace Runner.Tests
         public virtual void SetupContainer()
         {
             Adapter.Container = Adapter.CreateContainer();
+            Adapter.RegisterType(typeof(Poco), null);
+            Adapter.RegisterTypeMapping(typeof(IService), typeof(Service), null);
+            Adapter.RegisterTypeMapping(typeof(IService), typeof(Service), "1");
+            Adapter.RegisterTypeMapping(typeof(IService), typeof(Service), "2");
         }
 
     }
+
+    public interface IService { }
+    public class Service : IService { }
+
+    public class Poco { }
 }

@@ -8,7 +8,7 @@ namespace Runner.Setup
         public BenchmarkConfiguration()
         {
             //Add(DefaultConfig.Instance); // *** add default loggers, reporters etc? ***
-            Add(Job.Default.WithUnrollFactor(1));
+            Add(Job.Default.WithUnrollFactor(1).WithInvocationCount(100000));
             Set(new NameVersionOrderProvider());
         }
     }
