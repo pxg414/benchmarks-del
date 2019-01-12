@@ -1,12 +1,10 @@
-﻿using System;
+﻿using BenchmarkDotNet.Attributes;
+using System;
 using System.Linq;
-using BenchmarkDotNet.Attributes;
-using Runner.Setup;
 
 namespace Runner.Tests
 {
     [BenchmarkCategory("Registration")]
-    [Config(typeof(BenchmarkConfiguration))]
     public class MultiType : TestsBase
     {
         private static readonly string[] Names = Enumerable.Range(0, 200).Select(i => i.ToString()).ToArray();

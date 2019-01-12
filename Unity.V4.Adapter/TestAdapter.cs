@@ -1,6 +1,6 @@
-﻿using System;
-using Benchmark.Abstractions;
+﻿using Benchmark.Abstractions;
 using Microsoft.Practices.Unity;
+using System;
 
 namespace Unity.V4.Adapter
 {

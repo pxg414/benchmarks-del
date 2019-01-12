@@ -1,12 +1,8 @@
-﻿using System.Linq;
-using BenchmarkDotNet.Attributes;
-using Runner.Setup;
-using System.Collections.Generic;
+﻿using BenchmarkDotNet.Attributes;
 
 namespace Runner.Tests
 {
     [BenchmarkCategory("Registration")]
-    [Config(typeof(BenchmarkConfiguration))]
     public class Registration : TestsBase
     {
         private const string TestName = "Test Name";

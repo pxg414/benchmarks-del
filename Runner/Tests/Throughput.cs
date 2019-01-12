@@ -6,8 +6,8 @@ namespace Runner.Tests
 {
     [BenchmarkCategory("Basic")]
     [RPlotExporter]
-    [SimpleJob(RunStrategy.ColdStart, launchCount: 1)]
-    public class ColdStart : TestsBase
+    [SimpleJob(RunStrategy.Throughput, launchCount: 1, invocationCount:100000)]
+    public class Throughput : TestsBase
     {
         [Benchmark]
         public void Singleton() => Adapter.Singleton();
