@@ -1,5 +1,6 @@
 ﻿using Benchmark.Abstractions;
 using System;
+using Unity.Lifetime;
 
 namespace Unity.V6.Adapter
 {
@@ -12,7 +13,7 @@ namespace Unity.V6.Adapter
 
         public override object Singleton()
         {
-            return ((UnityContainer)Container).Resolve(typeof(IUnityContainer), null, null);
+            return ((IUnityContainer)Container).Resolve(typeof(IUnityContainer), null);
         }
 
         public override object Resolve(Type type, string name)

@@ -1,8 +1,6 @@
-﻿using System;
-using Benchmark.Abstractions;
+﻿using Benchmark.Abstractions;
+using System;
 using Unity.Lifetime;
-using Unity.Registration;
-using Unity.Resolution;
 
 namespace Unity.V5.Adapter
 {
@@ -15,32 +13,32 @@ namespace Unity.V5.Adapter
 
         public override object Singleton()
         {
-            return ((UnityContainer)Container).Resolve(typeof(IUnityContainer), null, new ResolverOverride[0]);
+            return ((IUnityContainer)Container).Resolve(typeof(IUnityContainer), null);
         }
 
         public override object Resolve(Type type, string name)
         {
-            return ((UnityContainer)Container).Resolve(type, name, new ResolverOverride[0]);
+            return ((IUnityContainer)Container).Resolve(type, name);
         }
 
         public override object RegisterType(Type type, string name)
         {
-            return ((UnityContainer)Container).RegisterType(null, type, name, null, new InjectionMember[0]);
+            return ((IUnityContainer)Container).RegisterType(null, type, name, null);
         }
 
         public override object RegisterTypeSingleton(Type type, string name)
         {
-            return ((UnityContainer)Container).RegisterType(null, type, name, new ContainerControlledLifetimeManager(), new InjectionMember[0]);
+            return ((IUnityContainer)Container).RegisterType(null, type, name, new ContainerControlledLifetimeManager());
         }
 
         public override object RegisterTypeMapping(Type from, Type to, string name)
         {
-            return ((UnityContainer)Container).RegisterType(from, to, name, null, new InjectionMember[0]);
+            return ((IUnityContainer)Container).RegisterType(from, to, name, null);
         }
 
         public override object RegisterTypeMappingSingleton(Type from, Type to, string name)
         {
-            return ((UnityContainer)Container).RegisterType(from, to, name, new ContainerControlledLifetimeManager(), new InjectionMember[0]);
+            return ((IUnityContainer)Container).RegisterType(from, to, name, new ContainerControlledLifetimeManager());
         }
     }
 }
